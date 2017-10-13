@@ -1,0 +1,2 @@
+WeasyPrint==0.41
+pystache==0.5.4

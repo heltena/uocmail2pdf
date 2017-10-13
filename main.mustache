@@ -1,0 +1,26 @@
+<html>
+<style>
+@media print {  
+  @page {
+    size: A4;
+  }
+}
+div.pre {
+  white-space: pre-line;
+}
+div.indent {
+  margin-left: 2em;
+}
+</style>
+<body>
+<div>
+<h1>Forum: {{ name }}</h1>
+
+{{# children }}
+<hr />
+{{> simple_mail }}
+{{/ children }}
+
+</div>
+</body>
+</html>

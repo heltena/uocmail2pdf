@@ -1,0 +1,14 @@
+<b>Subject:</b> {{ subject }}<br />
+<b>From:</b> {{ username }}<br />
+<b>Date:</b> {{ date }}<br />
+
+{{# content_list }}
+{{& . }}
+<br />
+{{/ content_list }}
+
+<div class="indent">
+    {{# children }}
+    {{> simple_mail }}
+    {{/ children }}
+</div>
