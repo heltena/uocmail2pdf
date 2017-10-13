@@ -3,6 +3,7 @@ from datetime import datetime
 import glob
 import html
 import quopri
+import os.path
 import pystache
 import sys
 import weasyprint
@@ -44,6 +45,7 @@ class UOCMail:
 class UOCForum:
     def __init__(self, name, filepattern):
         mails = {}
+        filepattern = os.path.expanduser(filepattern)
         for mail_name in glob.glob(filepattern):
             mail = UOCMail(mail_name)
             mails[mail.uoc_id] = mail
